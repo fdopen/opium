@@ -16,9 +16,10 @@ Library opium_rock
   Path:          rock
   Findlibname:   opium_rock
   Modules:       Opium_rock, Opium_misc
-  XMETARequires: core_kernel, lwt, cohttp.lwt, fieldslib, sexplib
+  XMETARequires: core_kernel, lwt,uwt.compat, cohttp.lwt, fieldslib, sexplib
   BuildDepends:  core_kernel,
                  lwt,
+                 uwt.compat,
                  cohttp.lwt,
                  fieldslib,
                  fieldslib.syntax,

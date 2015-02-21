@@ -1,0 +1,3 @@
+# OASIS_START
+# OASIS_STOP
+<**/*.ml> or <**/*.mli>: open(Uwt_compat)

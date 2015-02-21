@@ -1,6 +1,7 @@
 default: all
 
 oasis-setup:
+	cp _tags.add _tags
 	oasis setup
 
 configure: oasis-setup
@@ -13,10 +14,14 @@ configure-no-tests:
 	oasis setup
 	ocaml setup.ml -configure
 
-build:
+setup.ml:
+	cp _tags.add _tags
+	oasis setup
+
+build: setup.ml
 	ocaml setup.ml -build
 
-all: README.md
+all: setup.ml README.md
 	ocaml setup.ml -all
 
 test: build
